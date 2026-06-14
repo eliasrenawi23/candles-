@@ -1,0 +1,64 @@
+{
+  "Navbar": {
+    "brandName": "LUMIÈRE",
+    "home": "Home",
+    "catalog": "Catalog",
+    "language": "Language"
+  },
+  "Home": {
+    "title": "LUMIÈRE Candles",
+    "tagline": "Premium Handmade Candles",
+    "cta": "Shop Collection",
+    "aboutTitle": "Our Essence",
+    "aboutText1": "LUMIÈRE is born out of a passion for luxury, warm light, and soothing aromas. Every single candle is meticulously hand-poured using premium natural soy wax, lead-free cotton wicks, and the finest fragrance oils.",
+    "aboutText2": "Our mission is to bring warmth, elegance, and tranquility into your living spaces. Experience the gentle flame and sensory delight of a truly handcrafted masterpiece designed to illuminate your most cherished moments."
+  },
+  "Catalog": {
+    "title": "Our Collection",
+    "subtitle": "Immerse yourself in the gentle glow of our hand-poured soy candles.",
+    "filterLabel": "Filter by Category",
+    "all": "All Collection",
+    "orderWhatsApp": "Order via WhatsApp",
+    "priceSuffix": "${price}",
+    "noProducts": "No products found in this category."
+  },
+  "Categories": {
+    "classic": "Classic Scented",
+    "special": "Special Edition",
+    "therapy": "Aromatherapy"
+  },
+  "Products": {
+    "classic-lavender": {
+      "name": "Classic Lavender",
+      "description": "Soothing organic lavender scent, perfect for relaxation and evening wind-down."
+    },
+    "royal-crimson": {
+      "name": "Royal Crimson (Velvet Rose & Oud)",
+      "description": "A rich, mysterious blend of velvet damask rose wrapped in smoky oud wood and amber."
+    },
+    "golden-glow": {
+      "name": "Golden Glow (Amber & Vanilla)",
+      "description": "Warm, comforting notes of baltic amber combined with sweet, rich Madagascan vanilla."
+    },
+    "forest-mist": {
+      "name": "Forest Mist (Cedarwood & Pine)",
+      "description": "Fresh and earthy aroma of rain-soaked pine needles, cedarwood, and herbal notes."
+    },
+    "midnight-jasmine": {
+      "name": "Midnight Jasmine",
+      "description": "An alluring, sweet floral scent of blooming night jasmine with a touch of white musk."
+    },
+    "spiced-cinnamon": {
+      "name": "Spiced Cinnamon & Honey",
+      "description": "Cozy scent of warm ground cinnamon, spiced cloves, and a drizzle of sweet organic honey."
+    },
+    "citrus-breeze": {
+      "name": "Citrus Breeze (Orange & Bergamot)",
+      "description": "Uplifting and refreshing zesty bergamot blended with sweet orange blossom."
+    },
+    "sacred-sandalwood": {
+      "name": "Sacred Sandalwood",
+      "description": "Earthy, woodsy sandalwood base with soft undertones of patchouli and clean musk."
+    }
+  }
+}

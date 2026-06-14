@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-crimson: #6B0F1A;
+  --color-crimson-dark: #4A0A12;
+  --color-gold: #C9A84C;
+  --color-gold-light: #DFCA7D;
+  --color-cream: #FDF6EC;
+  --color-nearblack: #1A0A0A;
+  --color-charcoal: #2A1A1A;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-inter), sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-flicker: flicker 4s ease-in-out infinite alternate;
+  --animate-candle-glow: candle-glow 3s ease-in-out infinite alternate;
+
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 0.85;
+      filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.4));
+    }
+    30% {
+      opacity: 0.95;
+      filter: drop-shadow(0 0 15px rgba(201, 168, 76, 0.6));
+    }
+    50% {
+      opacity: 0.8;
+      filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.3));
+    }
+    70% {
+      opacity: 1;
+      filter: drop-shadow(0 0 25px rgba(201, 168, 76, 0.8));
+    }
+  }
+
+  @keyframes candle-glow {
+    0% {
+      box-shadow: 0 0 20px 5px rgba(201, 168, 76, 0.2), 0 0 40px 10px rgba(107, 15, 26, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 40px 15px rgba(201, 168, 76, 0.5), 0 0 80px 20px rgba(107, 15, 26, 0.3);
+    }
   }
 }
 
+:root {
+  --background: #1A0A0A;
+  --foreground: #FDF6EC;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #6B0F1A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A84C;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }

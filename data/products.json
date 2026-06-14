@@ -1,0 +1,74 @@
+[
+  {
+    "id": "classic-lavender",
+    "name": "Classic Lavender",
+    "description": "Soothing organic lavender scent, perfect for relaxation and evening wind-down.",
+    "price": 89,
+    "category": "classic",
+    "image": "/images/classic-lavender.png",
+    "available": true
+  },
+  {
+    "id": "royal-crimson",
+    "name": "Royal Crimson (Velvet Rose & Oud)",
+    "description": "A rich, mysterious blend of velvet damask rose wrapped in smoky oud wood and amber.",
+    "price": 129,
+    "category": "special",
+    "image": "/images/royal-crimson.png",
+    "available": true
+  },
+  {
+    "id": "golden-glow",
+    "name": "Golden Glow (Amber & Vanilla)",
+    "description": "Warm, comforting notes of baltic amber combined with sweet, rich Madagascan vanilla.",
+    "price": 99,
+    "category": "classic",
+    "image": "/images/golden-glow.png",
+    "available": true
+  },
+  {
+    "id": "forest-mist",
+    "name": "Forest Mist (Cedarwood & Pine)",
+    "description": "Fresh and earthy aroma of rain-soaked pine needles, cedarwood, and herbal notes.",
+    "price": 95,
+    "category": "therapy",
+    "image": "/images/forest-mist.png",
+    "available": true
+  },
+  {
+    "id": "midnight-jasmine",
+    "name": "Midnight Jasmine",
+    "description": "An alluring, sweet floral scent of blooming night jasmine with a touch of white musk.",
+    "price": 89,
+    "category": "classic",
+    "image": "/images/classic-lavender.png",
+    "available": true
+  },
+  {
+    "id": "spiced-cinnamon",
+    "name": "Spiced Cinnamon & Honey",
+    "description": "Cozy scent of warm ground cinnamon, spiced cloves, and a drizzle of sweet organic honey.",
+    "price": 119,
+    "category": "special",
+    "image": "/images/royal-crimson.png",
+    "available": true
+  },
+  {
+    "id": "citrus-breeze",
+    "name": "Citrus Breeze (Orange & Bergamot)",
+    "description": "Uplifting and refreshing zesty bergamot blended with sweet orange blossom.",
+    "price": 95,
+    "category": "therapy",
+    "image": "/images/golden-glow.png",
+    "available": true
+  },
+  {
+    "id": "sacred-sandalwood",
+    "name": "Sacred Sandalwood",
+    "description": "Earthy, woodsy sandalwood base with soft undertones of patchouli and clean musk.",
+    "price": 99,
+    "category": "therapy",
+    "image": "/images/forest-mist.png",
+    "available": false
+  }
+]
