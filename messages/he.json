@@ -60,5 +60,18 @@
       "name": "סנדלווד מקודש",
       "description": "בסיס עץ סנדל אדמתי עם תתי-גוון רכים של פצ'ולי ומושק נקי."
     }
+  },
+  "ProductDetails": {
+    "addToCart": "הוסף לעגלה",
+    "scentProfile": "פרופיל ריח",
+    "topNotes": "תווים עליונים",
+    "middleNotes": "תווי אמצע",
+    "baseNotes": "תווי בסיס",
+    "ingredients": "רכיבים",
+    "burnCare": "מדריך הדלקה וטיפול",
+    "burnTime": "זמן בעירה",
+    "size": "גודל",
+    "shipping": "משלוחים והחזרות",
+    "outOfStock": "אזל מהמלאי"
   }
 }

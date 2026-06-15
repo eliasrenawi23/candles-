@@ -1,7 +1,8 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '../../i18n/routing';
+import CartDrawer from '../../components/CartDrawer';
 import { Playfair_Display, Inter } from 'next/font/google';
 import '../globals.css';
 
@@ -19,8 +20,13 @@ const inter = Inter({
   display: 'swap',
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const titles: Record<string, string> = {
     en: "LUMIÈRE Candles | Premium Handmade Candles",
     he: "נרות LUMIÈRE | נרות פריมיום בעבודת יד",
@@ -51,9 +57,11 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Validate that the incoming locale is supported
-  if (!routing.locales.includes(locale as any)) {
+  if (!(routing.locales as readonly string[]).includes(locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   // Get translation messages for the provider
   const messages = await getMessages();
@@ -65,6 +73,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir} className={`${playfair.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-nearblack text-cream selection:bg-gold selection:text-nearblack font-sans">
         <NextIntlClientProvider messages={messages}>
+          <CartDrawer />
           {children}
         </NextIntlClientProvider>
       </body>

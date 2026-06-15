@@ -6,7 +6,15 @@
     "price": 89,
     "category": "classic",
     "image": "/images/classic-lavender.png",
-    "available": true
+    "available": true,
+    "burnTime": "50+ Hours",
+    "size": "9 oz / 255g",
+    "scentNotes": {
+      "top": ["Bergamot", "Eucalyptus"],
+      "middle": ["French Lavender", "Clary Sage"],
+      "base": ["Cedarwood", "Tonka Bean"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "royal-crimson",
@@ -15,7 +23,15 @@
     "price": 129,
     "category": "special",
     "image": "/images/royal-crimson.png",
-    "available": true
+    "available": true,
+    "burnTime": "60+ Hours",
+    "size": "11 oz / 310g",
+    "scentNotes": {
+      "top": ["Clove", "Praline"],
+      "middle": ["Damask Rose", "Smoky Oud"],
+      "base": ["Amber", "Vetiver"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "golden-glow",
@@ -24,7 +40,15 @@
     "price": 99,
     "category": "classic",
     "image": "/images/golden-glow.png",
-    "available": true
+    "available": true,
+    "burnTime": "50+ Hours",
+    "size": "9 oz / 255g",
+    "scentNotes": {
+      "top": ["Sweet Citrus", "Cinnamon"],
+      "middle": ["Baltic Amber", "Vanilla Orchid"],
+      "base": ["Sandalwood", "Warm Musk"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "forest-mist",
@@ -33,7 +57,15 @@
     "price": 95,
     "category": "therapy",
     "image": "/images/forest-mist.png",
-    "available": true
+    "available": true,
+    "burnTime": "50+ Hours",
+    "size": "9 oz / 255g",
+    "scentNotes": {
+      "top": ["Pine Needle", "Cool Mint"],
+      "middle": ["Cypress", "Cedarwood"],
+      "base": ["Oakmoss", "Damp Earth"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "midnight-jasmine",
@@ -42,7 +74,15 @@
     "price": 89,
     "category": "classic",
     "image": "/images/classic-lavender.png",
-    "available": true
+    "available": true,
+    "burnTime": "50+ Hours",
+    "size": "9 oz / 255g",
+    "scentNotes": {
+      "top": ["Lemon Zest", "Neroli"],
+      "middle": ["Night Jasmine", "Ylang Ylang"],
+      "base": ["White Musk", "Soft Sandalwood"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "spiced-cinnamon",
@@ -51,7 +91,15 @@
     "price": 119,
     "category": "special",
     "image": "/images/royal-crimson.png",
-    "available": true
+    "available": true,
+    "burnTime": "60+ Hours",
+    "size": "11 oz / 310g",
+    "scentNotes": {
+      "top": ["Nutmeg", "Orange Peel"],
+      "middle": ["Cinnamon Bark", "Spiced Clove"],
+      "base": ["Organic Honey", "Vanilla"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "citrus-breeze",
@@ -60,7 +108,15 @@
     "price": 95,
     "category": "therapy",
     "image": "/images/golden-glow.png",
-    "available": true
+    "available": true,
+    "burnTime": "50+ Hours",
+    "size": "9 oz / 255g",
+    "scentNotes": {
+      "top": ["Bergamot", "Grapefruit Zest"],
+      "middle": ["Orange Blossom", "White Jasmine"],
+      "base": ["Light Musk", "Sheer Woods"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   },
   {
     "id": "sacred-sandalwood",
@@ -69,6 +125,14 @@
     "price": 99,
     "category": "therapy",
     "image": "/images/forest-mist.png",
-    "available": false
+    "available": false,
+    "burnTime": "50+ Hours",
+    "size": "9 oz / 255g",
+    "scentNotes": {
+      "top": ["Cardamom", "Bergamot"],
+      "middle": ["Sandalwood", "Patchouli"],
+      "base": ["Deep Amber", "Clean Musk"]
+    },
+    "ingredients": "100% Natural Soy Wax, Lead-free Cotton Wick, Premium Essential Oils"
   }
 ]

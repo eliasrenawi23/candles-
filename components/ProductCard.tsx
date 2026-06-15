@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { MessageCircle } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { ShoppingCart } from 'lucide-react';
+import { useCartStore } from '../store/cartStore';
+import { Link } from '@/i18n/routing';
 
 export interface Product {
   id: string;
@@ -28,32 +30,26 @@ export default function ProductCard({ product }: ProductCardProps) {
   const description = tProducts(`${product.id}.description`);
   const categoryLabel = tCategories(product.category);
 
-  // WhatsApp configuration
-  const WHATSAPP_NUMBER = '972501234567'; // Replace with actual number
-  
-  // Format WhatsApp message depending on language
-  // Fallback if translations don't have custom message template yet
-  const getWhatsAppLink = () => {
-    let messageText = `Hi, I'm interested in ${name} from LUMIÈRE Candles`;
-    
-    try {
-      const locale = tCatalog('title') === 'הקولקציה שלנו' ? 'he' : tCatalog('title') === 'مجموعتنا' ? 'ar' : 'en';
-      if (locale === 'he') {
-        messageText = `שלום, אני מעוניין/ת ב-${name} מנרות LUMIÈRE`;
-      } else if (locale === 'ar') {
-        messageText = `مرحباً، أنا مهتم بشراء ${name} من شموع LUMIÈRE`;
-      }
-    } catch (e) {
-      // ignore
-    }
+  const locale = useLocale();
+  const { addItem, setDrawerOpen } = useCartStore();
 
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messageText)}`;
+  const handleAddToCart = () => {
+    addItem({
+      id: product.id,
+      name,
+      price: product.price,
+      image: product.image
+    });
+    setDrawerOpen(true);
   };
+
+  const addToCartText = locale === 'he' ? 'הוסף לעגלה' : locale === 'ar' ? 'أضف إلى السلة' : 'Add to Cart';
 
   const priceFormatted = tCatalog('priceSuffix', { price: product.price });
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border border-gold/15 bg-charcoal/40 transition-all duration-500 hover:border-gold/60 hover:shadow-[0_0_30px_rgba(201,168,76,0.2)]">
+      <Link href={`/catalog/${product.id}`} className="absolute inset-0 z-10" aria-label={`View ${name} details`} />
       
       {/* Product Image */}
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-nearblack">
@@ -98,22 +94,20 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* CTA Button */}
         {product.available ? (
-          <a
-            href={getWhatsAppLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-md bg-gold hover:bg-gold-light border border-gold text-nearblack font-semibold py-3 px-4 shadow-md transition-all duration-300 transform group-hover:translate-y-0"
+          <button
+            onClick={handleAddToCart}
+            className="relative z-20 flex items-center justify-center gap-2 rounded-md bg-[#c9a84c] hover:bg-[#d8bd70] border border-[#c9a84c] text-stone-900 font-semibold py-3 px-4 shadow-md transition-all duration-300 transform group-hover:translate-y-0"
           >
-            <MessageCircle className="h-5 w-5 fill-current" />
-            <span className="tracking-wide text-sm">{tCatalog('orderWhatsApp')}</span>
-          </a>
+            <ShoppingCart className="h-5 w-5 fill-current" />
+            <span className="tracking-wide text-sm">{addToCartText}</span>
+          </button>
         ) : (
           <button
             disabled
-            className="flex items-center justify-center gap-2 rounded-md bg-nearblack/40 border border-gold/10 text-cream/30 font-semibold py-3 px-4 cursor-not-allowed"
+            className="relative z-20 flex items-center justify-center gap-2 rounded-md bg-stone-900/40 border border-[#c9a84c]/10 text-cream/30 font-semibold py-3 px-4 cursor-not-allowed"
           >
-            <MessageCircle className="h-5 w-5 opacity-30" />
-            <span className="tracking-wide text-sm">{tCatalog('orderWhatsApp')}</span>
+            <ShoppingCart className="h-5 w-5 opacity-30" />
+            <span className="tracking-wide text-sm">{addToCartText}</span>
           </button>
         )}
       </div>

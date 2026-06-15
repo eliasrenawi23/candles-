@@ -4,7 +4,7 @@ This document outlines the next phase of development for the **LUMIÈRE Candles*
 
 ---
 
-## 1. Unified Shopping Cart System (Client-Side)
+## 1. Unified Shopping Cart System (Client-Side) ✅ [COMPLETED]
 
 ### Goal
 Allow customers to select multiple candles and checkout in a single request instead of ordering one item at a time.
@@ -19,7 +19,7 @@ Allow customers to select multiple candles and checkout in a single request inst
 
 ---
 
-## 2. Aggregated WhatsApp Checkout
+## 2. Aggregated WhatsApp Checkout ✅ [COMPLETED]
 
 ### Goal
 Compile all cart items into a single, beautifully structured WhatsApp message when checking out.
@@ -43,7 +43,7 @@ Compile all cart items into a single, beautifully structured WhatsApp message wh
 
 ---
 
-## 3. Dynamic Product Detail Pages (`/catalog/[id]`)
+## 3. Dynamic Product Detail Pages (`/catalog/[id]`) ✅ [COMPLETED]
 
 ### Goal
 Provide a premium detail page for each candle to showcase scent profiles, ingredients, and burning guidelines.

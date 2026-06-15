@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, useRouter, usePathname } from '@/i18n/routing';
-import { Menu, X, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
+import { useCartStore } from '../store/cartStore';
 
 export default function Navbar() {
   const t = useTranslations('Navbar');
@@ -14,6 +15,9 @@ export default function Navbar() {
   
   const [isOpen, setIsOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+
+  const { items, setDrawerOpen } = useCartStore();
+  const cartItemCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   const locales = [
     { code: 'en', label: 'English', flag: '🇬🇧' },
@@ -99,10 +103,37 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            {/* Cart Button */}
+            <button
+              onClick={() => setDrawerOpen(true)}
+              className="relative p-2 text-cream hover:text-gold transition-colors"
+              aria-label="Open cart"
+            >
+              <ShoppingCart className="h-5 w-5" />
+              {cartItemCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#c9a84c] text-xs font-bold text-stone-900">
+                  {cartItemCount}
+                </span>
+              )}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-4 md:hidden">
+            {/* Cart Button Mobile */}
+            <button
+              onClick={() => setDrawerOpen(true)}
+              className="relative p-1.5 text-cream hover:text-gold transition-colors"
+              aria-label="Open cart"
+            >
+              <ShoppingCart className="h-5 w-5" />
+              {cartItemCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#c9a84c] text-[10px] font-bold text-stone-900">
+                  {cartItemCount}
+                </span>
+              )}
+            </button>
             {/* Quick Language Toggle */}
             <div className="relative">
               <button
